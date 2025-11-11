@@ -51,7 +51,7 @@ def getfiles(query,cookies,filepath):
     if "/webclass/txtbk_show_text.php" in query:
         fileurl = get_fileurl(query)
     
-    print(fileurl)
+    #print(fileurl)
     if fileurl[0] == "pdf":
         print("Filetype:PDF")
         print(f"Downloading:{fileurl[1]} to {filepath}")
