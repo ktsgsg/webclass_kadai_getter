@@ -3,12 +3,7 @@
 
 #### 起動準備
 * python3 が実行できる環境を作ります．
-* 以下のライブラリが必要なのでダウンロードします．
-  * bs4
-  * json
-  * requests
-  * cryptography
-  * getpass
-  * もっといるかも
+* venv を入れます
+* '' pip install -r requirements.txt ''を実行
 * ライブラリがインストールできたら適当なターミナルをひらいて起動させます.
 * enjoy.
