@@ -16,3 +16,4 @@ cookies.txt
 __pycache__/auth_token.cpython-313.pyc
 __pycache__/settings.cpython-313.pyc
 __pycache__
+/webclass_kadai_getter_env
