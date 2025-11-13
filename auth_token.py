@@ -29,7 +29,7 @@ def getToken(userid,password):
             
         succesURL = json.loads(token.text)
         tokenId = succesURL["tokenId"]
-        #print(succesURL)
+        print(succesURL)
         print(f"tokenId:{tokenId}")
         #kugiri()
         return tokenId
