@@ -34,15 +34,16 @@ def decodebydict():
 def getpsw():
     try:
         d = decodebydict()
-    except:      
-        print("new needs to create.")
-        userid = input("userid:")
-        password = getpass.getpass("pasword:")
-        
-        pass_setting = {"userid":userid,"password":password}
+    except:
+        from general import console
+        console.print("[warn]初回起動: 認証情報を作成します[/]")
+        userid = console.input("[info]userid:[/] ")
+        password = getpass.getpass("password: ")
+
+        pass_setting = {"userid": userid, "password": password}
         keyfile = json.dumps(pass_setting)
-        
+
         encode(keyfile)
         d = decodebydict()
-        
+
     return d
