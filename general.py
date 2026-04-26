@@ -75,6 +75,13 @@ def content_ok(name, detail=None):
     console.print(line)
 
 
+def content_cached(name, detail=None):
+    line = f"     [muted]✓ {name} (取得済み)[/]"
+    if detail:
+        line += f" [muted]→ {detail}[/]"
+    console.print(line)
+
+
 def content_skip(name, reason="閉鎖もしくは予期せぬエラー"):
     console.print(f"     [warn]–[/] [muted]{name} ({reason})[/]")
 

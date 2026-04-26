@@ -47,6 +47,10 @@ def getfiles(query, session, filepath, label=None):
         return
 
     if fileurl[0] == "pdf":
+        if os.path.exists(filepath) and os.path.getsize(filepath) > 0:
+            g.putlog(f"skip (already exists):{filepath}")
+            g.content_cached(label, filepath)
+            return
         try:
             downloadpdf(fileurl[1], session, filepath)
             g.putlog(f"filepath:{filepath}")
